@@ -5,7 +5,6 @@ export function useKey(key, action) {
     function () {
       function callBack(e) {
         if (e.code.toLowerCase() === key.toLowerCase()) action();
-        console.log("CLEAN UP");
       }
       document.addEventListener("keydown", callBack);
       return function () {
